@@ -29,6 +29,15 @@ class BestBooks::CLI
     while input != "exit"
       puts ""
       input = gets.strip.downcase
+      puts ""
+
+      if input.to_i > 0
+        case input
+        when "1"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(0)
+
+        end
 
     end
   end
