@@ -22,6 +22,13 @@ class BestBooks::CLI
   def puts_books
     current_books.each_with_index do |book, index|
       puts "#{index +1}. #{book}"
+    end
+  end
+
+  def menu
+    while input != "exit"
+      puts ""
+      input = gets.strip.downcase
 
     end
   end
