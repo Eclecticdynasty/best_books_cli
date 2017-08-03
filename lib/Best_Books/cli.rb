@@ -41,6 +41,16 @@ class BestBooks::CLI
           puts ""
           @book_details = BestBooks::Book.scrape_details(1)
           book_info
+        when "3"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(2)
+          book_info
+        when "4"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(3)
+          book_info
+        
+
 
 
         end
