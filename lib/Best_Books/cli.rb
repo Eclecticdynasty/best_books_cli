@@ -142,4 +142,10 @@ class BestBooks::CLI
     end
   end
 
+  def book_info
+    puts "Title: #{@book_details.name}"
+    puts ""
+
+  end
+
 end
