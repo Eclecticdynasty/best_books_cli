@@ -49,11 +49,95 @@ class BestBooks::CLI
           puts ""
           @book_details = BestBooks::Book.scrape_details(3)
           book_info
-        
-
-
-
+        when "5"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(4)
+          book_info
+        when "6"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(5)
+          book_info
+        when "7"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(6)
+          book_info
+        when "8"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(7)
+          book_info
+        when "9"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(8)
+          book_info
+        when "10"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(9)
+          book_info
+        when "11"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(10)
+          book_info
+        when "12"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(11)
+          book_info
+        when "13"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(12)
+          book_info
+        when "14"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(13)
+          book_info
+        when "15"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(14)
+          book_info
+        when "16"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(15)
+          book_info
+        when "17"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(16)
+          book_info
+        when "18"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(17)
+          book_info
+        when "19"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(18)
+          book_info
+        when "20"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(19)
+          book_info
+        when "21"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(20)
+          book_info
+        when "22"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(21)
+          book_info
+        when "23"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(22)
+          book_info
+        when "24"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(23)
+          book_info
+        when "25"
+          puts ""
+          @book_details = BestBooks::Book.scrape_details(24)
+          book_info
         end
+      elsif input =="exit"
+        goodbye
+      end
+
 
     end
   end
