@@ -152,6 +152,11 @@ class BestBooks::CLI
 
   end
 
+def goodbye
+  puts ""
+  puts "See you soon for the next list!"
+
+end
 
 
 end
