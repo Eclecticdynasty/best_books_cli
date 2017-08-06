@@ -20,7 +20,8 @@ class BestBooks::CLI
   end
 
   def puts_books
-    current_books.each_with_index do |book, index|
+    @books = BestBooks::Book.today
+    @books.each_with_index do |book, index|
       puts "#{index +1}. #{book}"
     end
   end
@@ -155,6 +156,8 @@ class BestBooks::CLI
 def goodbye
   puts ""
   puts "See you soon for the next list!"
+  puts ""
+
 
 end
 
