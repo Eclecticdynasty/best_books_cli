@@ -9,8 +9,14 @@ class BestBooks::Book
 
   def self.scrape_best_books
     books = []
+    books << self.scrape_details
 
-    books 
+    books
+
+  end
+  def self.scrape_details
+
+    books = self.new
 
   end
 

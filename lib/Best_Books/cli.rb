@@ -31,6 +31,7 @@ class BestBooks::CLI
       puts ""
       input = gets.strip.downcase
       puts ""
+      puts "----------------------------------"
 
       if input.to_i > 0
         case input
