@@ -2,7 +2,7 @@ class BestBooks::CLI
 
   def call
     puts ""
-    puts "Welcome ro the Best Books List. Welcome to the place to find the best books in every genre. Feel free to browse to find out more."
+    puts "Welcome to the Best Books List. Welcome to the place to find the best books in every genre. Feel free to browse to find out more."
     puts ""
     book_list
   end
