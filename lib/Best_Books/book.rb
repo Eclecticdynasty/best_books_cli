@@ -9,14 +9,19 @@ class BestBooks::Book
 
   def self.scrape_best_books
     books = []
+
     books << self.scrape_details
 
     books
-
   end
+
   def self.scrape_details
 
-    books = self.new
+    doc = Nokogiri::HTML(open(http://www.powells.com/book/2666-9780312429218))
+
+    binding.pry
+
+    
 
   end
 
