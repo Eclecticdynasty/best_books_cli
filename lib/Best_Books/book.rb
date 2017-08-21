@@ -17,11 +17,18 @@ class BestBooks::Book
 
   def self.scrape_details
 
-    doc = Nokogiri::HTML(open(http://www.powells.com/book/2666-9780312429218))
+    doc = Nokogiri::HTML(open("http://www.powells.com/book/2666-9780312429218"))
 
-    binding.pry
+    book= self.new
 
-    
+    book.name = doc.search("h1.book-title").text
+    book.author = doc.search("#ProductDetail > div:nth-child(1) > span > a").text
+    book.summary = doc.search("#DisplayContent_2 > div:nth-child(23)").text
+
+    book
+
+
+
 
   end
 
