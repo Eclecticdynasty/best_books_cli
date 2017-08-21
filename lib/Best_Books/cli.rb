@@ -27,7 +27,9 @@ class BestBooks::CLI
       if input.to_i > 0
         the_list = @books[input.to_i-1]
         puts "#{the_list.name} - #{the_list.author} - #{the_list.summary}"
-      elsif puts "Enter exit when you are finished browsing"
+      elsif input == "list"
+        book_list
+
 
 
       end
@@ -36,6 +38,7 @@ class BestBooks::CLI
 
   end
   def goodbye
+    puts ""
     puts "See you soon for the next list!"
 
   end
