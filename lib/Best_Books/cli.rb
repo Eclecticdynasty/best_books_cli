@@ -23,6 +23,7 @@ class BestBooks::CLI
     while input != "exit"
       puts "Enter 1-25 to learn more about each book or type exit:"
       input = gets.strip.downcase
+      puts ""
 
       if input.to_i > 0
         the_list = @books[input.to_i-1]
