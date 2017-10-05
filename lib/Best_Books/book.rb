@@ -1,37 +1,22 @@
+require 'pry'
 class BestBooks::Book
 
   attr_accessor :name, :author, :summary
 
-  def self.today
-    self.scrape_best_books
-
-  end
-
-  def self.scrape_best_books
-    books = []
-
-    books << self.scrape_details
-
-    books
-  end
-
   def self.scrape_details
 
-    doc = Nokogiri::HTML(open("http://www.powells.com/book/2666-9780312429218"))
+    doc = Nokogiri::HTML(open("http://www.powells.com/25-books-to-read-before-you-die"))
 
-    book= self.new
+    doc.css('div.readbefore_box').collect do |book_css|
+      book = self.new
+      book.name = book_css.css('h3').text.strip
+      book.author = book_css.css('.author').text.strip
+      book.summary = book_css.css('p.blurb').text.strip
 
-    book.name = doc.search("h1.book-title").text
-    book.author = doc.search("#ProductDetail > div:nth-child(1) > span > a").text
-    book.summary = doc.search("#DisplayContent_2 > div:nth-child(23)").text
+      book
 
-    book
-
-
-
+    end
 
   end
-
-
 
 end
