@@ -7,13 +7,15 @@ class BestBooks::CLI
     puts ""
     puts "They are not ranked in any particular order."
     puts ""
+    BestBooks::Scraper.scrape_details
     book_list
     menu
     goodbye
   end
 
   def book_list
-    @books = BestBooks::Book.scrape_details
+    #@books is an array
+    @books = BestBooks::Book.all
     @books.each.with_index(1) do |book, i|
       puts "#{i}. #{book.name}"
     end
@@ -26,7 +28,8 @@ class BestBooks::CLI
       puts "Enter 1-25 to learn more about each book or list to see the list of books again or type exit:"
       input = gets.strip.downcase
 
-      if input.to_i > 0
+      # if the input is greater than 0 and less than or equal to 25
+      if input.to_i > 0 && input.to_i <= @books.count
       the_list = @books[input.to_i-1]
         puts ""
         puts "#{the_list.name} #{the_list.author}"
@@ -35,6 +38,8 @@ class BestBooks::CLI
         puts "  #{the_list.summary}  "
       elsif input == "list"
         book_list
+      else
+        puts "Invalid choice"
       end
     end
   end
